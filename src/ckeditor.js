@@ -23,12 +23,20 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 
-export default class ClassicEditor extends ClassicEditorBase {}
+import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
+import Table from '@ckeditor/ckeditor5-table/src/table';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+
+export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
+	// https://github.com/ckeditor/ckeditor5-autoformat/blob/master/src/autoformat.js
 	Autoformat,
 	Bold,
 	Italic,
@@ -42,7 +50,17 @@ ClassicEditor.builtinPlugins = [
 	ImageUpload,
 	Link,
 	List,
-	Paragraph
+	Paragraph,
+	Autosave,
+	Alignment,
+	// https://docs.ckeditor.com/ckeditor5/latest/features/highlight.html
+	// https://docs.ckeditor.com/ckeditor5/latest/api/module_highlight_highlight-HighlightConfig.html#member-options
+	Highlight,
+	// https://github.com/ckeditor/ckeditor5-autoformat/blob/master/docs/_snippets/features/autoformat.js
+	Code,
+	// https://docs.ckeditor.com/ckeditor5/latest/features/table.html
+	Table,
+	TableToolbar,
 ];
 
 // Editor configuration.
@@ -50,16 +68,19 @@ ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
-			'|',
 			'bold',
 			'italic',
-			'link',
 			'bulletedList',
 			'numberedList',
-			'imageUpload',
 			'blockQuote',
+			'code',
+			'alignment',
+			'highlight',
+			'link',
+			'imageUpload',
+			'insertTable',
 			'undo',
-			'redo'
+			'redo',
 		]
 	},
 	image: {

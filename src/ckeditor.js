@@ -23,6 +23,8 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
@@ -41,6 +43,8 @@ ClassicEditor.builtinPlugins = [
 	Autoformat,
 	Bold,
 	Italic,
+	Underline,
+	Strikethrough,
 	BlockQuote,
 	EasyImage,
 	Heading,
@@ -72,6 +76,8 @@ ClassicEditor.defaultConfig = {
 			'heading',
 			'bold',
 			'italic',
+			'underline',
+			'strikethrough',
 			'bulletedList',
 			'numberedList',
 			'blockQuote',

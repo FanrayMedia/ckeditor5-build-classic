@@ -29,6 +29,7 @@ import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+import Imagr from '../plugins/ckeditor5-imagr/src/imagr';
 
 export default class ClassicEditor extends ClassicEditorBase { }
 
@@ -61,6 +62,7 @@ ClassicEditor.builtinPlugins = [
 	// https://docs.ckeditor.com/ckeditor5/latest/features/table.html
 	Table,
 	TableToolbar,
+	Imagr,
 ];
 
 // Editor configuration.
@@ -77,7 +79,8 @@ ClassicEditor.defaultConfig = {
 			'alignment',
 			'highlight',
 			'link',
-			'imageUpload',
+			//'imageUpload',
+			'imagr',
 			'insertTable',
 			'undo',
 			'redo',

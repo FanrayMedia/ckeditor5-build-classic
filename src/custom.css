@@ -1,0 +1,33 @@
+/* https://docs.ckeditor.com/ckeditor5/latest/framework/guides/ui/theme-customization.html#customization-with-css-variables
+*/
+:root {
+    --ck-border-radius: 0; /* remove toolbar round corner */
+    --ck-color-toolbar-background: white;
+}
+
+/* remove editor content border except top */
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused,
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-blurred {
+    outline:none;
+    border: 0;
+    /* border-top: 1px solid hsl(0, 0%, 77%); */
+    box-shadow: none;
+    background: white;
+
+}
+
+.ck.ck-reset_all {
+    z-index: 2;
+    position: sticky;  
+    top: 64px; /* height of the topbar */
+}
+
+@media (max-width: 767px) {
+    .ck.ck-reset_all {
+        top: 56px; /* smaller screen topbar becomes shorter */
+    }
+}
+
+.ck-editor__top {
+    box-shadow: 0 0 5px hsla( 0,0%,0%,.2 );
+}

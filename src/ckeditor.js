@@ -33,6 +33,8 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import Imagr from '../plugins/ckeditor5-imagr/src/imagr';
 
+import './custom.css';
+
 export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.

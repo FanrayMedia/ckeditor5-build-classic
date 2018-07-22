@@ -10,24 +10,32 @@
 .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-blurred {
     outline:none;
     border: 0;
-    /* border-top: 1px solid hsl(0, 0%, 77%); */
     box-shadow: none;
     background: white;
-
 }
 
-.ck.ck-reset_all {
-    z-index: 2;
-    position: sticky;  
-    top: 64px; /* height of the topbar */
+/* the height of the topbar is 64px and 56px on smaller screen, adjust toolbar accordingly */
+.ck.ck-sticky-panel .ck-sticky-panel__content_sticky {
+    top: 64px;
 }
-
 @media (max-width: 767px) {
-    .ck.ck-reset_all {
-        top: 56px; /* smaller screen topbar becomes shorter */
+    .ck.ck-sticky-panel .ck-sticky-panel__content_sticky {
+        top: 56px;
     }
 }
 
-.ck-editor__top {
+/* add the missing toolbar bottom border */
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar, 
+.ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners 
+ {
+    border-bottom-width: 1px;
+}
+
+/* give toolbar box shadow */
+.ck.ck-editor__top {
     box-shadow: 0 0 5px hsla( 0,0%,0%,.2 );
 }
+
+/*
+currently ck has a bug expand or collapse toolbar icons when adjusting screen sizes.
+*/

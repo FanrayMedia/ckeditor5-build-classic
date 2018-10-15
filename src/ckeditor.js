@@ -21,15 +21,16 @@ import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 // import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
+import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import Table from '@ckeditor/ckeditor5-table/src/table';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
-import Table from '@ckeditor/ckeditor5-table/src/table';
-import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import Imagr from '../plugins/ckeditor5-imagr/src/imagr';
 
@@ -69,6 +70,7 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Imagr,
+	MediaEmbed
 ];
 
 // Editor configuration.
@@ -89,6 +91,7 @@ ClassicEditor.defaultConfig = {
 			'link',
 			//'imageUpload',
 			'imagr',
+			'mediaEmbed',
 			'insertTable',
 			'undo',
 			'redo',
@@ -121,7 +124,11 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	table: {
-		toolbar: ['tableColumn', 'tableRow', 'mergeTableCells']
+		contentToolbar: [
+			'tableColumn',
+			'tableRow',
+			'mergeTableCells'
+		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'

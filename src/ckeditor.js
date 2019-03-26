@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -12,6 +12,7 @@ import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
+import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
@@ -23,6 +24,7 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
@@ -49,13 +51,14 @@ ClassicEditor.builtinPlugins = [
 	Underline,
 	Strikethrough,
 	BlockQuote,
+	CKFinder,
 	EasyImage,
 	Heading,
 	Image,
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
-	//ImageUpload,
+	// ImageUpload,
 	Link,
 	List,
 	Paragraph,
@@ -67,6 +70,8 @@ ClassicEditor.builtinPlugins = [
 	// https://github.com/ckeditor/ckeditor5-autoformat/blob/master/docs/_snippets/features/autoformat.js
 	Code,
 	// https://docs.ckeditor.com/ckeditor5/latest/features/table.html
+
+	PasteFromOffice,
 	Table,
 	TableToolbar,
 	Imagr,
@@ -89,7 +94,7 @@ ClassicEditor.defaultConfig = {
 			'alignment',
 			'highlight',
 			'link',
-			//'imageUpload',
+			// 'imageUpload',
 			'imagr',
 			'mediaEmbed',
 			'insertTable',

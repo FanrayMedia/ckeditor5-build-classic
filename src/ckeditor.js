@@ -145,6 +145,7 @@ ClassicEditor.defaultConfig = {
 			{ language: 'css', label: 'CSS' },
 			{ language: 'javascript', label: 'JavaScript' },
 			{ language: 'typescript', label: 'TypeScript' },
+			{ language: 'sql', label: 'SQL' },
 			{ language: 'diff', label: 'Diff' },
 			{ language: 'php', label: 'PHP' },
 			{ language: 'python', label: 'Python' },
